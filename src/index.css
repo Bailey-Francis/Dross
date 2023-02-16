@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.test-class {
+  background-color: red;
+  color: purple;
+}
+
+.page-wrapper{
+  background-color: #941f1f;
+  padding: 20px;
+}
