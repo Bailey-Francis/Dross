@@ -1,7 +1,8 @@
 interface Tile {
     x: number;
     y: number;
-    render: () => JSX.Element;
+    text: string;
+    color: string;
 }
 
 interface MapProps {
@@ -12,9 +13,9 @@ interface MapProps {
 export function MapComponent ( props : MapProps ) {
 
     const buildTile = (tile: Tile) => {
-        const { x, y, render } = tile;
-        return <div className="tile" style={{ left: x*props.mapSize, top: y*props.mapSize }}>
-            {render()}
+        const { x, y, text, color } = tile;
+        return <div className="tile" style={{ left: x*props.mapSize, top: y*props.mapSize, backgroundColor: color }}>
+            {text}
         </div>
     }
 

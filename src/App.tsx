@@ -33,11 +33,8 @@ export default function App()  {
             <MapComponent 
                 mapSize={50}
                 tiles={[
-                    { x: 0, y: 0, render: () => <div>Grass</div> },
-                    { x: 0, y: 1, render: () => <div>Grass</div> },
-                    { x: 0, y: 3, render: () => <div>Grass</div> },
-                    { x: 0, y: 5, render: () => <div>Grass</div> },
-                    { x: playerPosition[0], y: playerPosition[1], render: () => <div>Player</div> },
+                    { x: 0, y: 0, text: "Grass", color: "green" },
+                    { x: playerPosition[0], y: playerPosition[1], text: "Player", color: "blue" },
                 ]}
             />
         </div>
