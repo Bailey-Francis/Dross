@@ -33,5 +33,20 @@ export function addPlayer(toTile:number[]){
     //alert (reference_map.toString())
     let x1:number = toTile[0]; let y1:number = toTile[1]
     reference_map[y1][x1] = 'x'
+    for (let y:number = 0; y<reference_map.length; y++){
+        for (let x:number = 0; x<reference_map[y].length; x++){
+            if (reference_map[y][x]=='x' && (x!=x1 || y!=y1)){
+                reference_map[y][x] = 'o'
+            }
+        }
+    }
     return reference_map
 }
+
+
+////
+
+
+
+
+
