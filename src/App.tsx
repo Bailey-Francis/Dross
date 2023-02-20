@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { MapComponent } from "./components/Map";
-import { Player, addPlayer, getStartingMap } from "./map";
 
 function PageWrapper( props : { children: React.ReactNode } ) {
     return <div className="page-wrapper">
