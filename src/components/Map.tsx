@@ -2,7 +2,7 @@ interface Tile {
     x: number;
     y: number;
     text: string;
-    color: string;
+    img: string;
 }
 
 interface MapProps {
@@ -13,9 +13,9 @@ interface MapProps {
 export function MapComponent ( props : MapProps ) {
 
     const buildTile = (tile: Tile) => {
-        const { x, y, text, color } = tile;
-        return <div className="tile" style={{ left: x*props.mapSize, top: y*props.mapSize, backgroundColor: color }}>
-            {text}
+        const { x, y, text, img } = tile;
+        return <div className="tile" style={{ left: x*props.mapSize, top: y*props.mapSize}}>
+            <img src={img}/>
         </div>
     }
 
