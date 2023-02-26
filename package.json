@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-responsive-spritesheet": "^2.3.9",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@types/react-responsive-spritesheet": "^1.0.0",
     "gh-pages": "^5.0.0"
   }
 }

@@ -1,25 +1,30 @@
-interface Tile {
-    x: number;
-    y: number;
-    text: string;
-    img: string;
-}
+import { Map, Tile } from "./Locations"
 
 interface MapProps {
-    mapSize: number;
-    tiles: Tile[]
+    tileDimensions: number
+    map: Map
+    offset: number[]
 }
+
+
+
 
 export function MapComponent ( props : MapProps ) {
 
+
+
     const buildTile = (tile: Tile) => {
-        const { x, y, text, img } = tile;
-        return <div className="tile" style={{ left: x*props.mapSize, top: y*props.mapSize}}>
-            <img src={img}/>
+        const { x, y, walkable } = tile;
+        let color:string = "green"
+        if(walkable==false){
+            color = 'red'
+        }
+        return <div className="tile" style={{ left: x*props.tileDimensions+props.offset[0], top: y*props.tileDimensions+props.offset[1], backgroundColor: color}}>
+            {x}, {y}
         </div>
     }
 
-    const tiles = props.tiles.map(buildTile);
+    const tiles = props.map.tiles.map(buildTile);
 
     return <div className="MapContainer">
         {tiles}

@@ -41,5 +41,21 @@ code {
   position: absolute;
   width: 64px;
   height: 64px;
-  background-color: rgb(29, 188, 71);
+  font-size: 10px;
+}
+
+.player {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: crimson;
+  font-size: 10px;
+}
+
+.enemy {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: blueviolet;
+  font-size: 10px;
 }
